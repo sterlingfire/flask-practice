@@ -11,7 +11,7 @@ debug = DebugToolbarExtension(app)
 @app.route("/")
 def show_template_picker():
     return render_template("story_templates.html",
-                           templates=story_templates.keys())
+                           templates=story_templates)
 
 
 @app.route("/input")
