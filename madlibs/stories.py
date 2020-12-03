@@ -24,6 +24,7 @@ class Story:
         self.prompts = words
         self.template = text
 
+
     def generate(self, answers):
         """Substitute answers into text."""
 
@@ -50,3 +51,11 @@ excited_story = Story(
     ["noun", "verb"],
     """OMG!! OMG!! I love to {verb} a {noun}!"""
 )
+
+weird_story = Story(
+    ["noun", "verb", "location", "adverb"],
+    """Why did I {verb} a {noun} at {location}? It happened so {adverb}."""
+)
+
+# story_templates = [silly_story, excited_story, weird_story]
+story_templates = {"silly":silly_story, "excited":excited_story, "weird":weird_story}
